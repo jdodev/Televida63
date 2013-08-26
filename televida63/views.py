@@ -14,4 +14,5 @@ from django.core import serializers
 def inicio(request):
 	#formulario = AuthenticationForm()
 	#return render_to_response('home.html', {'formulario':formulario}, context_instance=RequestContext(request))
-	pass
+	html = "<html><body>televida63.com</body></html>"
+	return HttpResponse(html)

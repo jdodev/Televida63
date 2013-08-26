@@ -1,88 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="description" content="Choluteca, television, radio, San Lorenzo, Honduras">
-    <meta name="author" content="<Daniel Ortiz>jdoavila@gmail.com, <David Briones>dbrio2011@gmail.com">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
-
-    <title>Televida</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.css" rel="stylesheet">
-    <!-- Bootstrap theme -->
-    <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-
-    <div class="container">
-    <div class="row">
-    <header>
-      
-      <div class="col-md-6">
-        <div class="logo">
-          <img src="img/logo.png" alt="televida">
-        </div><!-- /logo -->
-      </div>
-
-      <form  class="buscar" action="index_submit" method="get" accept-charset="utf-8">
-        <div class="col-md-6">
-        <div class="row">
-            <div class="col-lg-6">
-             <div class="input-group">
-             <span class="input-group-btn">
-               <button class="btn btn-default" type="button">Buscar:</button>
-            </span>
-               <input type="text" class="form-control">
-          </div><!-- /input-group -->
-        </div><!-- /.col-lg-4 -->
-  
-          </div><!-- /.row -->
-      </form><!--/buscar-->
-
-          <div class="row"><!--Tiempo, Hora-->
-            <div class="col-md-8">
-             <div class="tiempo">
-                <!-- www.TuTiempo.net - Ancho:218px - Alto:127px -->
-                <div id="TT_vyngbhthdrKDKI2KMAVHqDjDztnKvnMzivIKvCigxKFfpVpv6"><strong><a href="http://www.tutiempo.net">El tiempo</a></strong></div>
-                <script type="text/javascript" src="http://www.tutiempo.net/widget/eltiempo_vyngbhthdrKDKI2KMAVHqDjDztnKvnMzivIKvCigxKFfpVpv6"></script>
-             </div>
-            </div>
-
-            <div class="hora">
-                00:00 am<br>
-                
-              </div>
-            
-          </div><!--row Tiempo, Hora-->
-          </div>
-
-          
-            <div class="col-md-12">
-              <div class="botonera">
-                <ul class="nav nav-tabs">
-                  <li><a href="#">Inicio</a></li>
-                  <li><a href="#">Noticias</a></li>
-                  <li><a href="#">Programa</a></li>
-                  <li><a href="#">Chat</a></li>
-                  <li><a href="#">Contáctanos</a></li>
-
-                </ul>
-              </div>
-            </div>
-          
-      </div>
-    </header><!-- /header -->
-    <div class="row">
+  {% extends 'base.html' %}
+  {% block titulo %} Televida | Inicio {% endblock %}
+  {% block contenido %}
     <section id="reproductor"><!-- reproductor, banner -->
 
       <div class="col-md-5">
@@ -190,26 +108,4 @@
 
 
     </section><!-- /contenido -->
-    </div>
-
-
-   
-     
-   
-
-    <div class="row">
-    <footer>
-      Derechos reservados Televida Canal 63<br>
-      Desarrollado por: <a href="http://www.creacioneshn.com">Creacioneshn.com</a>
-    </footer><!-- /footer -->
-    </div>
-    </div> <!-- /container -->
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/holder.js"></script>
-  </body>
-</html>
+  {% endblock contenido %}

@@ -102,9 +102,9 @@ padding: 5px;
   
 }
 
-hora{
+.hora{
   
-  background-image: url(../../img/ftiempo.png);
+  background-image: url(/static/img/ftiempo.png);
   color: #555;
   margin-top: 10px;
   font-size: 2em;
@@ -152,7 +152,7 @@ display: none !important;
 }
 .hora{
   
-  background-image: url(../../img/ftiempo.png);
+  background-image: url(/static/img/ftiempo.png);
   color: #555;
   margin-top: 10px;
   font-size: 2em;
@@ -195,7 +195,7 @@ video {
 }
 header{
   
-  background-image: url(../../img/header.png);
+  background-image: url(/static/img/header.png);
   background-repeat: no-repeat;
   height: 290px;
 

@@ -12,5 +12,4 @@ from datetime import datetime
 from django.core import serializers
 
 def inicio(request):
-	#formulario = AuthenticationForm()
 	return render_to_response('index.html', context_instance=RequestContext(request))

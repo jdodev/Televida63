@@ -86,19 +86,16 @@
   text-align: justify;
   padding: 5px;
   margin-left: 30px; 
+  width:  auto;
+  margin-bottom: 5px;
+  height: auto;
+ 
 }
-.texto2{
-background-color: #E6E6E6;
-text-align: justify;
-margin-bottom: 5px;
-padding: 5px;
-}
+
 .noticia1{
  margin-top: 10px;
  margin-left: 30px;
  height: 160px;
-
-
   
 }
 

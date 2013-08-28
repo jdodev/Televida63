@@ -8,7 +8,7 @@ class Periodista(models.Model):
 	BiografiaPeriodista = models.TextField(max_length=10000, help_text='Biografía del Periodista', verbose_name=u'Biografía')
 
 	def __unicode__(self):
-		return self.NombrePeriodista
+		return self.NombrePeriodista + " " + self.ApellidoPeriodista
 
 class TiposNoticia(models.Model):
 	TipoNoticia = models.CharField(max_length=50, help_text='Tipo de Noticia', verbose_name=u'Tipo Noticia')

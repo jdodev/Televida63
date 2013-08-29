@@ -7,7 +7,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 #from emet.forms import ActasPresidentesForm, ActasDiputadosForm, ActasAlcaldesForm
 from django.utils import simplejson
-from televida.models import *
+from televida63.models import *
 from datetime import datetime
 from django.core import serializers
 

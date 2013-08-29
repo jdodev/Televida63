@@ -6440,9 +6440,10 @@ body.modal-open,
   display: block;
   padding: 5px;
 }
-.chat
+.chat{
   display: none !important;
 }
+
 
 .tiempo{
 display: none !important;

@@ -29,7 +29,7 @@
                <img class="img-rounded" src="{{MEDIA_URL}}{{Noti.ImagenNoticia}}" alt="{{Noti.TituloNoticia}}" height="180">
              </div>
            </div>
-           <div class="col-md-8">
+           <div  class="{% if forloop.counter == 1 or forloop.counter == 2 %}col-md-8{% else %}col-md-4{% endif %}">
             <div class="texto">
                <h4>{{Noti.TituloNoticia|title}}</h4>
                <p>{{Noti.TextoNoticia|truncatechars:300}}</p>
@@ -42,7 +42,6 @@
       {% endfor %}
         
         <div class="col-md-4">
-          
           <div class="encuesta">
              <h3>!Su Opinión es muy importante</h3>
              <p>Quien de estos personajes es el más idoneo para dirigir el destino de Honduras?</p>
@@ -54,12 +53,6 @@
              </form></p>
            </div>
         </div>
-
-
-
-
-      </div><!--fin row noticias2-->
-
 
     </section><!-- /contenido -->
   {% endblock contenido %}

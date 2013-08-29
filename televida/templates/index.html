@@ -26,13 +26,14 @@
       <div class="row">
            <div class="col-md-4">
              <div class="imagen">
-               <img class="img-rounded" src="{{Noti.ImagenNoticia}}" alt="{{Noti.TituloNoticia}}" height="128" width="128">
+               <img class="img-rounded" src="{{MEDIA_URL}}{{Noti.ImagenNoticia}}" alt="{{Noti.TituloNoticia}}" height="180">
              </div>
            </div>
            <div class="col-md-8">
             <div class="texto">
                <h4>{{Noti.TituloNoticia|title}}</h4>
-               <p>{{Noti.TextoNoticia|truncatechars:140}}</p>
+               <p>{{Noti.TextoNoticia|truncatechars:300}}</p>
+               <p><a href="verNoticia/{{Noti.id}}/" class="btn btn-info">Leer más...</a></p> 
             </div>
            </div>
       </div>

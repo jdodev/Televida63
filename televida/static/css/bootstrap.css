@@ -118,7 +118,7 @@
 .imagen{
   widows: 200px;
   height: 160px;
-  margin-left: 10px;
+  margin-left: 20px;
 
   margin-bottom: 10px;
 }
@@ -134,7 +134,7 @@
   background-color: #E6E6E6;
   text-align: justify;
   padding: 10px;
-  margin-left: 30px; 
+  margin-left: 0px; 
   width:  auto;
   margin-bottom: 5px;
   height: auto;
@@ -1285,7 +1285,7 @@ pre code {
     width: 25%;
   }
   .col-md-4 {
-    width: 33.33333333333333%;
+    /* width: 33.33333333333333%; */
   }
   .col-md-5 {
     width: 41.66666666666667%;

@@ -6444,7 +6444,6 @@ body.modal-open,
   display: none !important;
 }
 
-
 .tiempo{
 display: none !important;
 }
@@ -6504,6 +6503,8 @@ tr.visible-xs {
 th.visible-xs,
 td.visible-xs {
   display: none !important;
+}
+
 }
 
 @media (max-width: 767px) {

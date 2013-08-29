@@ -7,9 +7,10 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 #from emet.forms import ActasPresidentesForm, ActasDiputadosForm, ActasAlcaldesForm
 from django.utils import simplejson
-#from emet.models import RepPresidentes, Movimientos, ActasPresidentes, ActasAlcaldes, RepAlcaldes, RepDiputados, ActasDiputados
+from televida.models import *
 from datetime import datetime
 from django.core import serializers
 
 def inicio(request):
-	return render_to_response('index.html', context_instance=RequestContext(request))
+	UltNoticias = Noticia.objects.all()[:5]
+	return render_to_response('index.html', {'TNoticias' : UltNoticias}, context_instance=RequestContext(request))

@@ -22,72 +22,24 @@
 
     <section id="contenido">
       <div class="titulo"><h1>Ultimas Noticias</h1></div>
-
+      {% for Noti in TNoticias %}
       <div class="row">
-         
            <div class="col-md-4">
              <div class="imagen">
-               imagen 200x160
+               <img src="{{Noti.ImagenNoticia}}" alt="{{Noti.TituloNoticia}}">
              </div>
            </div>
            <div class="col-md-8">
             <div class="texto">
-               <h4>Una Nación un día marca las bases de un nuevo país</h4>
-               <p>Con el nuevo avance, la brecha cambiaria con el oficial, que cotiza estable a $ 5,62 para la venta, es ya del 63,70%. Tal como informó LA NACION ayer, la ganancia del dólar en el segmento mayorista quedó apenas por debajo del 14,27 por ciento que registró el último año y que había sido la mayor desde 2002, cuando tras la salida de la Convertibilidad había subido 236,25 por ciento.
-               </p>
-            </div>
-           </div>
-         
-
-      </div>
-
-      <div class="row">
-         
-           <div class="col-md-4">
-             <div class="imagen">
-               imagen 200x160
-             </div>
-           </div>
-           <div class="col-md-8">
-            <div class="texto">
-               <h4>Una Nación un día marca las bases de un nuevo país</h4>
-               <p>Con el nuevo avance, la brecha cambiaria con el oficial, que cotiza estable a $ 5,62 para la venta, es ya del 63,70%. Tal como informó LA NACION ayer, la ganancia del dólar en el segmento mayorista quedó apenas por debajo del 14,27 por ciento que registró el último año y que había sido la mayor desde 2002, cuando tras la salida de la Convertibilidad había subido 236,25 por ciento.</p>
+               <h4>{{Noti.TituloNoticia}}</h4>
+               <p>{{Noti.TextoNoticia}}</p>
             </div>
            </div>
       </div>
-
-      <div class="row"><!-- row noticias2-->
-        <div class="col-md-8">
-
-          <div class="col-md-6">
-             <div class="imagen">
-               imagen 200x160
-             </div>
-           </div>
-           <div class="col-md-6">
-            <div class="texto">
-               <h4>Una Nación un día marca las bases de un nuevo país</h4>
-               <p>Con el nuevo avance, la brecha cambiaria con el oficial, que cotiza estable a $ 5,62 para la venta, es ya del 63,70%. Tal como informó LA NACION ayer, la ganancia del dólar en el segmento mayorista quedó .</p>
-            </div>
-           </div>
-
-
-           <div class="col-md-6">
-             <div class="imagen">
-               imagen 200x160
-             </div>
-           </div>
-           <div class="col-md-6">
-            <div class="texto">
-               <h4>Una Nación un día marca las bases de un nuevo país</h4>
-               <p>Con el nuevo avance, la brecha cambiaria con el oficial, que cotiza estable a $ 5,62 para la venta, es ya del 63,70%. Tal como informó LA NACION ayer, la ganancia del dólar en el segmento mayorista quedó .</p>
-            </div>
-           </div>
-
-        </div>
+      {% empty %}
+      <h2>Aún no se han ingresado noticias.</h2>
+      {% endfor %}
         
-
-
         <div class="col-md-4">
           
           <div class="encuesta">

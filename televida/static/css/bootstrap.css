@@ -6434,7 +6434,6 @@ body.modal-open,
 
 @media (max-width: 480px) {
   
-
   .nav > li > a {
   position: relative;
   display: block;
@@ -6503,8 +6502,7 @@ tr.visible-xs {
 th.visible-xs,
 td.visible-xs {
   display: none !important;
-}
-
+  }
 }
 
 @media (max-width: 767px) {

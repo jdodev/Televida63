@@ -137,6 +137,10 @@
 }
 .texto{
   background-color: #E6E6E6;
+  -webkit-box-sizing: border-radius: 15px;
+  -moz-box-sizing: border-radius: 15px;
+  box-sizing: border-radius: 15px;
+  border-radius: 5px;
   text-align: justify;
   padding: 10px;
   margin-left: 0px; 

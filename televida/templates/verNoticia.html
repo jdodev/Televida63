@@ -2,12 +2,44 @@
 {% block titulo %} Televida | Inicio {% endblock %}
 {% block contenido %}
     <section id="contenido">
-      <div class="titulo"><h1>{{ Filtrada.TituloNoticia|title }}</h1></div>
-        <img src="{{MEDIA_URL}}{{ Filtrada.ImagenNoticia }}" height="300px" alt="{{ Filtrada.TituloNoticia }}">
-        <p>{{ Filtrada.TextoNoticia }}</p>
-        <p>{{ Filtrada.IdTipoNoticia.TipoNoticia }}</p>
-        <p>{{ Filtrada.FechaNoticia }}</p>
-        <p>{{ Filtrada.IdPeriodista.NombrePeriodista }} {{ Filtrada.IdPeriodista.ApellidoPeriodista }}</p>
-        <img src="{{MEDIA_URL}}{{ Filtrada.IdPeriodista.FotoPeriodista }}" height="100px" alt="{{ Filtrada.IdPeriodista.NombrePeriodista }} {{ Filtrada.IdPeriodista.ApellidoPeriodista }}">
+      <div class="row">
+
+      	<div class="col-md-12">
+
+      		<div class="VerNoticia">
+      			
+      				<div class="row">
+      					<div class="col-md-5">
+      						<img class="imagen" src="{{MEDIA_URL}}{{ Filtrada.ImagenNoticia }}" height="300px" alt="{{ Filtrada.TituloNoticia }}">
+      					</div>
+
+      					<div class="col-md-6">
+      						<h1>{{ Filtrada.TituloNoticia|title }}</h1>
+      					</div>
+      					
+      				</div>
+
+				        <p class="VerNoticia2">{{ Filtrada.TextoNoticia }}</p>
+				        <p>{{ Filtrada.IdTipoNoticia.TipoNoticia }}</p>
+				        <strong><p>{{ Filtrada.FechaNoticia }}</p></strong>
+				        
+				        <div class="col-md-12">
+				        	<div class="col-md-4">
+				        		<img class="img-circle" src="{{MEDIA_URL}}{{ Filtrada.IdPeriodista.FotoPeriodista }}" height="100px" alt="{{ Filtrada.IdPeriodista.NombrePeriodista }} {{ Filtrada.IdPeriodista.ApellidoPeriodista }}">
+				        	</div><br>
+				        	
+				        	<div class="col-md-2">
+				        		<strong>Redacción</strong>
+				        		<p>{{ Filtrada.IdPeriodista.NombrePeriodista }} {{ Filtrada.IdPeriodista.ApellidoPeriodista }}</p>
+				        	</div>
+				        </div><br><br>
+			        
+      		</div>
+
+      	</div>
+
+      </div>
+
+
     </section><!-- /contenido -->
 {% endblock contenido %}

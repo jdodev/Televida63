@@ -71,7 +71,7 @@
 
 }
 .encuesta{
-  font-style: arial;
+  
   background-color: #939393;
   padding: 20px;
   vertical-align: top;
@@ -144,6 +144,13 @@
 
  
 }
+.VerNoticia{
+  padding: 30px;
+}
+.VerNoticia2{
+  text-align: justify;
+  margin-top: 20px;
+}
 
 
 
@@ -165,6 +172,11 @@
   padding: 40px 0px 50px 0px;
 
 
+}
+.imagen{
+  width: auto;
+  max-width: 320px;
+  height: auto;
 }
 
 aside{
@@ -238,7 +250,8 @@ a:hover {
 
 h1 {
   margin: 0.67em 0;
-  font-size: 2em;
+  font-size: 1.7em !important;
+  text-align: left !important;
 }
 
 abbr[title] {
@@ -6476,7 +6489,21 @@ display: none !important;
   background-color: #E6E6E6;
   text-align: justify;
   padding: 20px;
+  width: auto;
+  max-width: 300px;
 
+}
+.VerNoticia,.VerNoticia2{
+  width: auto;
+  max-width: 300px;
+  padding: 5px;
+}
+.encuesta{
+  width: 340px;
+}
+.imagen{
+  width: auto;
+  max-width: 280px;
 }
 
 

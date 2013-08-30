@@ -58,9 +58,10 @@
 
 }
 .banner{
-  background-color: #fff;
-  margin-top: 30px;
+  margin: 30px 30px 0px 0px;
+  width: 460px;
   height: 250px;
+  
 }
 .botonera{
   margin-top: 210px;
@@ -121,7 +122,7 @@
 
 }
 .imagen{
-  widows: 200px;
+  width: 200px;
   height: 160px;
   margin-left: 20px;
 
@@ -130,8 +131,8 @@
 
 .reproductor2{
   margin-top: 10px;
-  background-color: #fff;
-  widows: 420px;
+  margin-left: 20px;
+  width: 420px;
   height: 300px;
 
 }

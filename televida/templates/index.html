@@ -1,4 +1,4 @@
-  {% extends 'base.html' %}
+ {% extends 'base.html' %}
   {% block titulo %} Televida | Inicio {% endblock %}
   {% block contenido %}
     <section id="reproductor"><!-- reproductor, banner -->
@@ -22,37 +22,80 @@
 
     <section id="contenido">
       <div class="titulo"><h1>Ultimas Noticias</h1></div>
-      {% for Noti in TNoticias %}
-      <div class="row">
-           <div class="col-md-4">
+  
+
+        {% for Noti in TNoticias %}
+        {% if forloop.counter == 1 or forloop.counter == 2 %}
+
+        <div class="row"><!--noticia1-->
+
+          <div class="col-md-4">
              <div class="imagen">
                <img class="img-rounded" src="{{MEDIA_URL}}{{Noti.ImagenNoticia}}" alt="{{Noti.TituloNoticia}}" height="180">
              </div>
-           </div>
-           <div  class="{% if forloop.counter == 1 or forloop.counter == 2 %}col-md-8{% else %}col-md-4{% endif %}">
+          </div>
+           <div  class="col-md-8">
             <div class="texto">
                <h4>{{Noti.TituloNoticia|title}}</h4>
                <p>{{Noti.TextoNoticia|truncatechars:300}}</p>
                <p><a href="verNoticia/{{Noti.id}}/" class="btn btn-info">Leer más...</a></p> 
             </div>
            </div>
-      </div>
-      {% empty %}
-      <h2>Aún no se han ingresado noticias.</h2>
+      
+
+        </div><!--noticia1-->
+
+        {% endif %}
+
       {% endfor %}
-        
-        <div class="col-md-4">
-          <div class="encuesta">
-             <h3>!Su Opinión es muy importante</h3>
-             <p>Quien de estos personajes es el más idoneo para dirigir el destino de Honduras?</p>
-             <p><form action="index_submit" method="get" accept-charset="utf-8">
-              <input type="radio" name="group1" value="juan"> Juan Orlando Hernández<br>
-              <input type="radio" name="group1" value="juan"> Mauricio Villeda<br>
-              <input type="radio" name="group1" value="juan"> Xiomara Castro de Zelaya<br>
-              <input type="radio" name="group1" value="juan"> Salvador Nasralla<br>
-             </form></p>
-           </div>
+
+
+        <div class="row"><!--noticia2-->
+
+        <div class="col-md-7">
+
+        {% for Noti in TNoticias %}
+        {% if forloop.counter == 3 or forloop.counter == 4 %}
+
+          <div class="row">
+
+              <div class="col-md-4">
+                <div class="imagen">
+                  <img class="img-rounded" src="{{MEDIA_URL}}{{Noti.ImagenNoticia}}" alt="{{Noti.TituloNoticia}}" height="180">
+                </div>
+              </div>
+            <div  class="col-md-6">
+              <div class="texto">
+                 <h4>{{Noti.TituloNoticia|title}}</h4>
+                 <p>{{Noti.TextoNoticia|truncatechars:130}}</p>
+                 <p><a href="verNoticia/{{Noti.id}}/" class="btn btn-info">Leer más...</a></p> 
+              </div>
+            </div>
+           
+
         </div>
+        {% endif %} {% endfor %}
+          
+      </div>
+
+        <div class="col-md-3">
+          
+            <div class="encuesta">
+               <h3>!Su Opinión es muy importante</h3>
+               <p>Quien de estos personajes es el más idoneo para dirigir el destino de Honduras?</p>
+               <p><form action="index_submit" method="get" accept-charset="utf-8">
+                <input type="radio" name="group1" value="juan"> Juan Orlando Hernández<br>
+                <input type="radio" name="group1" value="juan"> Mauricio Villeda<br>
+                <input type="radio" name="group1" value="juan"> Xiomara Castro de Zelaya<br>
+                <input type="radio" name="group1" value="juan"> Salvador Nasralla<br>
+               </form></p>
+             
+            </div>
+
+        </div>
+
+
+        </div><!--noticia2-->
 
     </section><!-- /contenido -->
   {% endblock contenido %}

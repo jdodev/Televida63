@@ -14,3 +14,8 @@ from django.core import serializers
 def inicio(request):
 	UltNoticias = Noticia.objects.all()[:5]
 	return render_to_response('index.html', {'TNoticias' : UltNoticias}, context_instance=RequestContext(request))
+
+def VerNoticia(request, IdNoticia):
+	dato = get_object_or_404(Noticia, pk=IdNoticia)
+	NoticiaFiltrada = Noticia.objects.filter(id=IdNoticia)
+	return render_to_response('index.html', {'Filtrada' : NoticiaFiltrada}, context_instance=RequestContext(request))

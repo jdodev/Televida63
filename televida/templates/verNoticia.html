@@ -1,0 +1,56 @@
+ {% extends 'base.html' %}
+  {% block titulo %} Televida | Inicio {% endblock %}
+  {% block contenido %}
+    <section id="reproductor"><!-- reproductor, banner -->
+
+      <div class="col-md-5">
+        <div class="reproductor2">
+          Reproductor
+        </div>
+      </div><!-- /play -->
+
+      <div class="col-md-7">
+        <div class="banner">
+          banner
+        </div><!-- /banner -->
+      </div>
+
+    </section ><!-- /reproductor, banner -->
+    </div>
+
+    <div class="row">
+
+    <section id="contenido">
+      <div class="titulo"><h1>Ultimas Noticias</h1></div>
+        <h2>{{ Filtrada.TituloNoticia|title }}</h2>
+        <img src="{{MEDIA_URL}}{{ Filtrada.ImagenNoticia }}" alt="{{ Filtrada.TituloNoticia }}">
+        <p>{{ Filtrada.TextoNoticia }}</p>
+        <p>{{ Filtrada.IdTipoNoticia.TipoNoticia }}</p>
+        <p>{{ Filtrada.FechaNoticia }}</p>
+        <p>{{ Filtrada.IdPeriodista.NombrePeriodista }} {{ Filtrada.IdPeriodista.ApellidoPeriodista }}</p>
+        <img src="{{MEDIA_URL}}{{ Filtrada.ImagenNoticia }}" alt="{{ Filtrada.IdPeriodista.NombrePeriodista }} {{ Filtrada.IdPeriodista.ApellidoPeriodista }}">
+      </div><!--noticia1-->
+
+
+        <div class="row"><!--noticia2-->
+        <div class="col-md-3">
+          
+            <div class="encuesta">
+               <h3>!Su Opinión es muy importante</h3>
+               <p>Quien de estos personajes es el más idoneo para dirigir el destino de Honduras?</p>
+               <p><form action="index_submit" method="get" accept-charset="utf-8">
+                <input type="radio" name="group1" value="juan"> Juan Orlando Hernández<br>
+                <input type="radio" name="group1" value="juan"> Mauricio Villeda<br>
+                <input type="radio" name="group1" value="juan"> Xiomara Castro de Zelaya<br>
+                <input type="radio" name="group1" value="juan"> Salvador Nasralla<br>
+               </form></p>
+             
+            </div>
+
+        </div>
+
+
+        </div><!--noticia2-->
+
+    </section><!-- /contenido -->
+  {% endblock contenido %}

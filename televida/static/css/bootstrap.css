@@ -80,10 +80,11 @@
   -webkit-box-sizing: border-radius: 15px;
   -moz-box-sizing: border-radius: 15px;
   box-sizing: border-radius: 15px;
-  border-radius: 15px;
+  border-radius: 5px;
   color: #eee;
   vertical-align: top;
   width: auto;
+  max-width: 260px;
   margin-top: 20px;
 
 }
@@ -142,7 +143,8 @@
   width:  auto;
   margin-bottom: 10px;
   height: auto;
-   font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro',Arial, sans-serif;
+  border-bottom: 1px solid #ccc;
 
 
  

@@ -10,6 +10,7 @@ from django.utils import simplejson
 from televida63.models import *
 from datetime import datetime
 from django.core import serializers
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def inicio(request):
 	UltNoticias = Noticia.objects.all()[:5]
@@ -22,5 +23,6 @@ def VerNoticia(request, IdNoticia):
 	return render_to_response('verNoticia.html', {'Filtrada' : dato}, context_instance=RequestContext(request))
 
 def VerNoticiasTodos(request):
-	AllNoticias = Noticia.objects.all().order_by('id')[:20]
+	AllNoticias = Noticia.objects.all().order_by('id')
+	pagina = Paginator(AllNoticias, 25)
 	return render_to_response('listNoticias.html', {'TNoticias' : AllNoticias}, context_instance=RequestContext(request))

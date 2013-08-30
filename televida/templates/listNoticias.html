@@ -28,6 +28,17 @@
 
         </div><!--noticia1-->
          {% endfor %}
+         <center>
+        <ul class="pagination">
+        {% if TNoticias.has_previous %}
+          <li><a href="?page={{ TNoticias.previous_page_number }}">&laquo;</a></li>
+        {% endif %}
+          <li><a href="#">Página {{ TNoticias.number }} de {{ TNoticias.paginator.num_pages }}</a></li>
+        {% if TNoticias.has_next %}
+          <li><a href="?page={{ TNoticias.next_page_number }}">&raquo;</a></li>
+        {% endif %}
+        </ul>
+        </center>
         </div>
 
 

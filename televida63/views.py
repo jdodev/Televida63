@@ -25,4 +25,13 @@ def VerNoticia(request, IdNoticia):
 def VerNoticiasTodos(request):
 	AllNoticias = Noticia.objects.all().order_by('id')
 	pagina = Paginator(AllNoticias, 25)
-	return render_to_response('listNoticias.html', {'TNoticias' : AllNoticias}, context_instance=RequestContext(request))
+
+	page = request.GET.get('page')
+	try:
+		Noticias2 = pagina.page(page)
+	except PageNotAnInteger:
+		Noticias2 = pagina.page(1)
+	except EmptyPage:
+		Noticias2 = pagina.page(pagina.num_pages)
+
+	return render_to_response('listNoticias.html', {'TNoticias' : Noticias2}, context_instance=RequestContext(request))

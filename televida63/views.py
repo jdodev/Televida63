@@ -13,9 +13,14 @@ from django.core import serializers
 
 def inicio(request):
 	UltNoticias = Noticia.objects.all()[:5]
-	return render_to_response('index.html', {'TNoticias' : UltNoticias}, context_instance=RequestContext(request))
+	AllBanners = Banners.objects.all().order_by('OrdenBanner')[:8]
+	return render_to_response('index.html', {'TNoticias' : UltNoticias, 'TBanners' : AllBanners}, context_instance=RequestContext(request))
 
 def VerNoticia(request, IdNoticia):
 	dato = get_object_or_404(Noticia, pk=IdNoticia)
 	NoticiaFiltrada = Noticia.objects.filter(id=IdNoticia)
 	return render_to_response('verNoticia.html', {'Filtrada' : dato}, context_instance=RequestContext(request))
+
+def VerNoticiasTodos(request):
+	AllNoticias = Noticia.objects.all().order_by('id')[:20]
+	return render_to_response('listNoticias.html', {'TNoticias' : AllNoticias}, context_instance=RequestContext(request))

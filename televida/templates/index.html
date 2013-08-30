@@ -38,7 +38,7 @@
             <div class="texto">
                <h4>{{Noti.TituloNoticia|title}}</h4>
                <p>{{Noti.TextoNoticia|truncatechars:300}}</p>
-               <p><a href="verNoticia/{{Noti.id}}/" class="btn btn-info">Leer más...</a></p> 
+               <p><a href="Noticia/{{Noti.id}}/" class="btn btn-info">Leer más...</a></p> 
             </div>
            </div>
       
@@ -52,7 +52,7 @@
 
         <div class="row"><!--noticia2-->
 
-        <div class="col-md-7">
+        <div class="col-md-8">
 
         {% for Noti in TNoticias %}
         {% if forloop.counter == 3 or forloop.counter == 4 %}
@@ -64,11 +64,11 @@
                   <img class="img-rounded" src="{{MEDIA_URL}}{{Noti.ImagenNoticia}}" alt="{{Noti.TituloNoticia}}" height="180">
                 </div>
               </div>
-            <div  class="col-md-6">
+            <div  class="col-md-7">
               <div class="texto">
                  <h4>{{Noti.TituloNoticia|title}}</h4>
                  <p>{{Noti.TextoNoticia|truncatechars:130}}</p>
-                 <p><a href="verNoticia/{{Noti.id}}/" class="btn btn-info">Leer más...</a></p> 
+                 <p><a href="Noticia/{{Noti.id}}/" class="btn btn-info">Leer más...</a></p> 
               </div>
             </div>
            

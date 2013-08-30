@@ -18,4 +18,4 @@ def inicio(request):
 def VerNoticia(request, IdNoticia):
 	dato = get_object_or_404(Noticia, pk=IdNoticia)
 	NoticiaFiltrada = Noticia.objects.filter(id=IdNoticia)
-	return render_to_response('index.html', {'Filtrada' : NoticiaFiltrada}, context_instance=RequestContext(request))
+	return render_to_response('verNoticia.html', {'Filtrada' : dato}, context_instance=RequestContext(request))

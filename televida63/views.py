@@ -35,3 +35,6 @@ def VerNoticiasTodos(request):
 		Noticias2 = pagina.page(pagina.num_pages)
 
 	return render_to_response('listNoticias.html', {'TNoticias' : Noticias2}, context_instance=RequestContext(request))
+
+def ListaBlogs(request):
+	

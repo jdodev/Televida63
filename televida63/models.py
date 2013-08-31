@@ -56,3 +56,11 @@ class Banners(models.Model):
 	def __unicode__(self):
 		return self.TituloBanner
 
+class BlogEntrada(models.Model):
+	IdPeriodista = models.ForeignKey(Periodista)
+	TituloEntrada = models.CharField(max_length=150, help_text='Titulo de la entrada en el blog.', verbose_name=u'Titulo')
+	TextoEntrada = models.TextField(help_text='Texto de la Entrada en el blog', verbose_name=u'Texto')
+	FechaPublicacion = models.DateTimeField(auto_now_add=True, help_text='Fecha de Publicación', verbose_name=u'Fecha')
+
+	def __unicode__(self):
+		return self.TituloNoticia

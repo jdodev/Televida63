@@ -37,4 +37,4 @@ def VerNoticiasTodos(request):
 	return render_to_response('listNoticias.html', {'TNoticias' : Noticias2}, context_instance=RequestContext(request))
 
 def ListaBlogs(request):
-	
+	pass

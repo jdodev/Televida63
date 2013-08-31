@@ -9,190 +9,7 @@
  */
 
 /*! normalize.css v2.1.0 | MIT License | git.io/normalize */
-@import url(http://fonts.googleapis.com/css?family=Flamenco:300,400);
-@media (min-width: 768px) and (max-width: 979px){
-  #reproductor, header, #contenido,footer{
-  width: auto !important;
-  max-width: 780px !important;
 
-
-}
-.tiempo{
-  display: none;
-}
-.hora{
-  display: none;
-}
-.banner{
-  display: none;
-}
-.botonera{
-  margin-top: 14px !important;
-}
-
-}
-
-@media (max-width: 767px){
-  .tiempo{
-    display: none !important;
-  }
-  .hora{
-    display: none !important;
-  }
-  .banner{
-    display: none !important;
-  }
-  .botonera{
-  margin-top: 14px !important;
-}
- #reproductor, header, #contenido,footer{
-  width: auto !important;
-  max-width: 600px !important;
-
-
-}
-.container{
-  margin: 20px !important;
-  padding: auto !important;
-}
-
-}
-.banner{
-  margin: 30px 30px 0px 0px;
-  width: 460px;
-  height: 250px;
-  
-}
-.botonera{
-  margin-top: 210px;
-}
-#reproductor, header, #contenido,footer{
-  width: auto;
-  max-width: 960px;
-
-
-}
-.encuesta{
-  font-family: 'Source Sans Pro', sans-serif;
-  background-color: #939393;
-  padding: 20px;
-  vertical-align: top;
-  margin: 0px;
-  -webkit-box-sizing: border-radius: 15px;
-  -moz-box-sizing: border-radius: 15px;
-  box-sizing: border-radius: 15px;
-  border-radius: 5px;
-  color: #eee;
-  vertical-align: top;
-  width: auto;
-  max-width: 260px;
-  margin-top: 20px;
-
-}
-
-#reproductor{
-  
-  background-color: #F5F5F5;
-  height: 320px;
-  border-bottom: 1px solid #aaa;
-  
-  
-}
-#contenido{
-  background-color: #F5F5F5;
-
-  
-}
-.buscar{
-  padding: 20px;
-
-}
-
-.logo{
-  padding-top: 30px;
-}
-.titulo{
-  
-  border-bottom: 1px solid #bbb;
-  height: 40px;
-  padding-left: 5px;
-  margin-bottom: 10px;
-  text-align: left;
-
-
-}
-.imagen{
-  width: 200px;
-  height: 160px;
-  margin-left: 20px;
-
-  margin-bottom: 10px;
-}
-
-.reproductor2{
-  margin-top: 10px;
-  margin-left: 20px;
-  width: 420px;
-  height: 300px;
-
-}
-.texto{
-  background-color: #E6E6E6;
-  -webkit-box-sizing: border-radius: 15px;
-  -moz-box-sizing: border-radius: 15px;
-  box-sizing: border-radius: 15px;
-  border-radius: 5px;
-  text-align: justify;
-  padding: 10px;
-  margin-left: 0px; 
-  width:  auto;
-  margin-bottom: 10px;
-  height: auto;
-  font-family: 'Source Sans Pro',Arial, sans-serif;
-  border-bottom: 1px solid #ccc;
-
-
- 
-}
-
-.texto:hover{
-  background-color: #fff;
-  transition: all .4s ease;
-}
-.VerNoticia{
-  padding: 30px;
-}
-.VerNoticia2{
-  text-align: justify;
-  margin-top: 20px;
-}
-
-
-
-
-.noticia1{
- margin-top: 10px;
- margin-left: 30px;
- height: 160px;
-  
-}
-
-.hora{
-  
-  background-image: url(/static/img/ftiempo.png);
-  color: #555;
-  margin-top: 10px;
-  font-size: 2em;
-  margin-top: 30px;
-  padding: 40px 0px 50px 0px;
-
-
-}
-.imagen{
-  width: auto;
-  max-width: 320px;
-  height: auto;
-}
 
 aside{
   float: right;
@@ -203,6 +20,7 @@ footer{
   text-align: center;
   background-color: #201E1E;
   padding: 10px;
+  border-radius: 5px;
 }
 
 article,
@@ -1289,13 +1107,15 @@ pre code {
 .hora{
   
   background-image: url(/static/img/ftiempo.png);
+  background-repeat: repeat-x;
   color: #555;
   margin-top: 10px;
-  font-size: 2em;
   margin-top: 30px;
   padding: 40px 0px 50px 0px;
 
-
+}
+.gmt{
+  font-size: 2em;
 }
   .col-md-1,
   .col-md-2,
@@ -6523,6 +6343,8 @@ display: none !important;
 .imagen{
   width: auto;
   max-width: 280px;
+  border-radius: 5px;
+
 }
 
 

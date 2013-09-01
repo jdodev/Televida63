@@ -6294,6 +6294,10 @@ body.modal-open,
   position: relative;
   display: block;
   padding: 5px;
+  margin-top: 70px;
+}
+.buscar{
+  display: none;
 }
 .chat{
   display: none !important;

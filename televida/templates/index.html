@@ -1,4 +1,5 @@
  {% extends 'base.html' %}
+{% load polls_tags %}
   {% block titulo %} Televida | Inicio {% endblock %}
   {% block contenido %}
     <section id="reproductor"><!-- reproductor, banner -->
@@ -99,14 +100,7 @@
           
             <div class="encuesta">
                <h3>!Su Opinión es muy importante</h3>
-               <p>Quien de estos personajes es el más idoneo para dirigir el destino de Honduras?</p>
-               <p><form action="index_submit" method="get" accept-charset="utf-8">
-                <input type="radio" name="group1" value="juan"> Juan Orlando Hernández<br>
-                <input type="radio" name="group1" value="juan"> Mauricio Villeda<br>
-                <input type="radio" name="group1" value="juan"> Xiomara Castro de Zelaya<br>
-                <input type="radio" name="group1" value="juan"> Salvador Nasralla<br><br>
-                <p align="center"><a href="Noticia/{{Noti.id}}/" class="btn btn-primary">Votar</a></p> 
-               </form></p>
+               {% poll_queue "Web" %}
              
             </div>
 

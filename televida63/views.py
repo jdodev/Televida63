@@ -25,7 +25,7 @@ def VerNoticia(request, IdNoticia):
 
 def VerNoticiasTodos(request):
 	AllNoticias = Noticia.objects.all().order_by('id')
-	pagina = Paginator(AllNoticias, 2)
+	pagina = Paginator(AllNoticias, 25)
 
 	page = request.GET.get('page')
 	try:

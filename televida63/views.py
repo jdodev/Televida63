@@ -14,7 +14,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core.mail import EmailMessage
 
 def inicio(request2televida):
-	UltNoticias = Noticia.objects.all()[:5]
+	UltNoticias = Noticia.objects.all()[:4]
 	AllBanners = Banners.objects.all().order_by('OrdenBanner')[:8]
 	return render_to_response('index.html', {'TNoticias' : UltNoticias, 'TBanners' : AllBanners}, context_instance=RequestContext(request2televida))
 

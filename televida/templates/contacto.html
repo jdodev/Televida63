@@ -1,0 +1,28 @@
+ {% extends 'base.html' %}
+  {% block titulo %} Televida | Contáctenos {% endblock %}
+  {% block contenido %}
+
+    <section id="contenido">
+      
+        <div class="row">
+        <div class="col-md-12">
+          <h1 class="titulo">Contáctenos</h1>
+        </div>
+        <div class="row"><!--noticia1-->
+      
+          <div class="contac">
+          <form name="frmContacto" method="POST" action="">{% csrf_token %}
+          {{ formi.as_p }} 
+          <button class="btn btn-primary" type="submit">Enviar</button> 
+          </form>
+          </div>
+      
+
+        </div><!--noticia1-->
+        </div>
+
+
+       
+
+    </section><!-- /contenido -->
+  {% endblock contenido %}

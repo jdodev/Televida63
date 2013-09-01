@@ -5,12 +5,13 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
-#from emet.forms import ActasPresidentesForm, ActasDiputadosForm, ActasAlcaldesForm
+from televida63.forms import ContactoForm
 from django.utils import simplejson
 from televida63.models import *
 from datetime import datetime
 from django.core import serializers
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.core.mail import EmailMessage
 
 def inicio(request):
 	UltNoticias = Noticia.objects.all()[:5]
@@ -43,3 +44,19 @@ def ListaBlogs(request):
 def VerEntradasBlog(request, IdBlogP):
 	EntradasPeriodista = BlogEntrada.objects.filter(IdPeriodista=IdBlogP).order_by('-FechaPublicacion')[:10]
 	return render_to_response('verBlog.html', {'BlogEntradas' : EntradasPeriodista}, context_instance=RequestContext(request))
+
+
+def contacto(request):
+	if request.method=='POST':
+		formulario = ContactoForm(request.POST)
+		if formulario.is_valid():
+			titulo = 'Mensaje desde el sitio web de Televida'
+			contenido = 'De: ' + formulario.cleaned_data['NombreCompleto'] + '\n'
+			contenido += 'Email: ' + formulario.cleaned_data['Correo'] + '\n'
+			contenido += formulario.cleaned_data['Mensaje']
+			correo = EmailMessage(titulo, contenido, to=['jdoavila@gmail.com'])
+			correo.send()
+			return HttpResponseRedirect('/')
+	else:
+		formulario = ContactoForm()
+	return render_to_response('contacto.html', {'formi' : formulario}, context_instance=RequestContext(request))

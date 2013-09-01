@@ -1,0 +1,36 @@
+ {% extends 'base.html' %}
+  {% block titulo %} Televida | Blogs {% endblock %}
+  {% block contenido %}
+
+    <section id="contenido">
+      
+        <div class="row">
+        <div class="col-md-12">
+          <h1 class="titulo">Ultimas Noticias</h1>
+        </div>
+          {% for Peri in TPeriodistas %}
+        <div class="row"><!--noticia1-->
+        
+          <div class="col-md-4">
+             <div class="imagen">
+               <img class="img-circle" src="{{MEDIA_URL}}{{Peri.FotoPeriodista}}" alt="{{Noti.TituloNoticia}}" height="100">
+             </div>
+          </div>
+           <div  class="col-md-8">
+            <div class="texto">
+               <h4>{{Peri.NombrePeriodista|title}} {{Peri.ApellidoPeriodista|title}}</h4>
+               <p><a href="/Blogs/{{Peri.id}}/" class="btn btn-info">Ver Blog</a></p>
+
+            </div>
+           </div>
+      
+
+        </div><!--noticia1-->
+         {% endfor %}
+        </div>
+
+
+       
+
+    </section><!-- /contenido -->
+  {% endblock contenido %}

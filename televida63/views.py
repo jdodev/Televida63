@@ -37,4 +37,9 @@ def VerNoticiasTodos(request):
 	return render_to_response('listNoticias.html', {'TNoticias' : Noticias2}, context_instance=RequestContext(request))
 
 def ListaBlogs(request):
-	pass
+	AllPeriodistas = Periodista.objects.all().order_by('NombrePeriodista')
+	return render_to_response('listBlogs.html', {'TPeriodistas' : AllPeriodistas}, context_instance=RequestContext(request))
+
+def VerEntradasBlog(request, IdBlogP):
+	EntradasPeriodista = BlogEntrada.objects.filter(IdPeriodista=IdBlogP).order_by('-FechaPublicacion')[:10]
+	return render_to_response('verBlog.html', {'BlogEntradas' : EntradasPeriodista}, context_instance=RequestContext(request))

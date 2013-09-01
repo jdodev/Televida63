@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block titulo %} Televida | Blog de: {{BlogEntradas.IdPeriodista.NombrePeriodista|title}} {{BlogEntradas.IdPeriodista.ApellidoPeriodista|title}}  {% endblock %}
+{% block contenido %}
+    <section id="contenido">
+    {% for Entrada in BlogEntradas %}
+      <div class="row">
+
+      	<div class="col-md-12">
+
+      		<div class="VerNoticia">
+      			
+      				<div class="row">
+
+      					<div class="col-md-6">
+      						<h1>{{ Entrada.TituloEntrada|title }}</h1>
+      					</div>
+      					
+      				</div>
+
+				        <p class="VerNoticia2">{{ Entrada.TextoEntrada }}</p>
+				        
+				        <strong><p>Publicado hace: {{ Entrada.FechaPublicacion|timesince }} &nbsp; || &nbsp; {{ Entrada.FechaPublicacion|date }}</p></strong>
+				        
+				        <div class="col-md-12">
+				        	<div class="col-md-4">
+				        		<img class="img-circle" src="{{MEDIA_URL}}{{ Entrada.IdPeriodista.FotoPeriodista }}" height="100px" alt="{{ Entrada.IdPeriodista.NombrePeriodista }} {{ Entrada.IdPeriodista.ApellidoPeriodista }}">
+				        	</div><br>
+				        	
+				        	<div class="col-md-2">
+				        		<strong>Redacción</strong>
+				        		<p>{{ Entrada.IdPeriodista.NombrePeriodista }} {{ Entrada.IdPeriodista.ApellidoPeriodista }}</p>
+				        	</div>
+				        </div><br><br>
+			        
+      		</div>
+
+      	</div>
+
+      </div>
+      <hr>
+    {% empty %}
+    <h2>Este periodista aún no tiene entradas en el blog.</h2>
+    {% endfor %}
+
+    </section><!-- /contenido -->
+{% endblock contenido %}

@@ -63,4 +63,4 @@ class BlogEntrada(models.Model):
 	FechaPublicacion = models.DateTimeField(auto_now_add=True, help_text='Fecha de Publicación', verbose_name=u'Fecha')
 
 	def __unicode__(self):
-		return self.TituloNoticia
+		return self.TituloEntrada

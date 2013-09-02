@@ -64,3 +64,8 @@ class BlogEntrada(models.Model):
 
 	def __unicode__(self):
 		return self.TituloEntrada
+
+class Reproductor(models.Model):
+	CodigoReproductor = models.TextField(help_text='Codigo que genera Ustream', verbose_name=u'Codigo')
+	def __unicode__(self):
+		return self.CodigoReproductor

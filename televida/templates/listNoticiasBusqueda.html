@@ -1,0 +1,37 @@
+ {% extends 'base.html' %}
+  {% block titulo %} Televida | Lista de Noticias Encontradas {% endblock %}
+  {% block contenido %}
+
+    <section id="contenido">
+      
+        <div class="row">
+        <div class="col-md-12">
+          <h1 class="titulo">Ultimas Noticias</h1>
+        </div>
+          {% for Noti in Noticias %}
+        <div class="row"><!--noticia1-->
+        
+          <div class="col-md-4">
+             <div class="imagen">
+               <img class="img-rounded" src="{{MEDIA_URL}}{{Noti.ImagenNoticia}}" alt="{{Noti.TituloNoticia}}" height="180">
+             </div>
+          </div>
+           <div  class="col-md-8">
+            <div class="texto">
+               <h4>{{Noti.TituloNoticia|title}}</h4>
+               <p>{{Noti.TextoNoticia|truncatechars:300|safe}}</p>
+               <p><a href="/Noticia/{{Noti.id}}/" class="btn btn-info">Leer más...</a></p>
+
+            </div>
+           </div>
+      
+
+        </div><!--noticia1-->
+         {% endfor %}
+        </div>
+
+
+       
+
+    </section><!-- /contenido -->
+  {% endblock contenido %}

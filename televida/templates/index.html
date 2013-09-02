@@ -6,8 +6,9 @@
 
       <div class="col-md-6">
         <div class="reproductor2">
-         <iframe width="420" height="268" src="http://www.ustream.tv/embed/6540154?v=3&amp;wmode=direct" scrolling="no" frameborder="0" style="border: 0px none transparent;">    </iframe>
-<br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center;" target="_blank">Live streaming video by Ustream</a>
+        {% for codigito in EnlaceVideo %}
+        {{ codigito.CodigoReproductor|safe }}
+        {% endfor %}
         </div>
       </div><!-- /play -->
 

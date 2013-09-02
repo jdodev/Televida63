@@ -15,8 +15,9 @@ from django.core.mail import EmailMessage
 
 def inicio(request2televida):
 	UltNoticias = Noticia.objects.all().order_by('-id')[:4]
+	VideoUrl = Reproductor.objects.all()
 	AllBanners = Banners.objects.all().order_by('OrdenBanner')[:8]
-	return render_to_response('index.html', {'TNoticias' : UltNoticias, 'TBanners' : AllBanners}, context_instance=RequestContext(request2televida))
+	return render_to_response('index.html', {'TNoticias' : UltNoticias, 'TBanners' : AllBanners, 'EnlaceVideo' : VideoUrl}, context_instance=RequestContext(request2televida))
 
 def VerNoticia(request, IdNoticia):
 	dato = get_object_or_404(Noticia, pk=IdNoticia)
@@ -60,3 +61,19 @@ def contacto(request):
 	else:
 		formulario = ContactoForm()
 	return render_to_response('contacto.html', {'formi' : formulario}, context_instance=RequestContext(request))
+
+def BuscarNoticia(request):
+	Termino = request.GET.get('Termino')
+	AllNoticiasEncontradas = Noticia.objects.filter(TextoNoticia__contains=Termino).order_by('-id')
+
+	pagina = Paginator(AllNoticiasEncontradas, 25)
+
+	page = request.GET.get('page')
+	try:
+		Noticias2 = pagina.page(page)
+	except PageNotAnInteger:
+		Noticias2 = pagina.page(1)
+	except EmptyPage:
+		Noticias2 = pagina.page(pagina.num_pages)
+	return render_to_response('listNoticiasBusqueda.html', {'Noticias' : Noticias2}, context_instance=RequestContext(request))
+

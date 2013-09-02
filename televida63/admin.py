@@ -1,4 +1,4 @@
-from televida63.models import Periodista, TiposNoticia, Noticia, Programa, Programacion, Banners, BlogEntrada
+from televida63.models import *
 from django.contrib import admin
 
 class Editorcito(admin.ModelAdmin):
@@ -13,3 +13,4 @@ admin.site.register(Programa)
 admin.site.register(Programacion)
 admin.site.register(Banners)
 admin.site.register(BlogEntrada, Editorcito)
+admin.site.register(Reproductor)

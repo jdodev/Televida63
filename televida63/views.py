@@ -24,7 +24,7 @@ def VerNoticia(request, IdNoticia):
 	return render_to_response('verNoticia.html', {'Filtrada' : dato}, context_instance=RequestContext(request))
 
 def VerNoticiasTodos(request):
-	AllNoticias = Noticia.objects.all().order_by('id')
+	AllNoticias = Noticia.objects.all().order_by('-id')
 	pagina = Paginator(AllNoticias, 25)
 
 	page = request.GET.get('page')

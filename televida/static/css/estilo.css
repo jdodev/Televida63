@@ -169,7 +169,7 @@
 
 
 .noticia1{
- margin-top: 10px;
+ margin-top: 20px;
  margin-left: 30px;
  height: 160px;
   
@@ -180,13 +180,14 @@
   background-image: url(/static/img/ftiempo.png);
   color: #555;
   margin-top: 10px;
-  
-  margin-top: 30px;
-  padding: 40px 0px 50px 0px;
+  padding: 20px 0px 50px 0px;
 
 }
 .imagen{
   width: auto;
   max-width: 320px;
   height: auto;
+}
+.redes{
+  text-align: left;
 }

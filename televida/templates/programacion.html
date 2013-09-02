@@ -1,10 +1,13 @@
+{% extends 'base.html' %}
+{% block titulo %} Televida | Programación {% endblock %}
 {% block contenido %}
     <section id="contenido">
 
-    <!--Lunes-->
+    <!--Lunes y martes-->
       <div id="aqui" class="row">
 
       	<div class="col-md-6">
+        <center><strong>Lunes</strong></center>
           <table class="table table-hover">
             <thead>
             <tr>
@@ -14,92 +17,164 @@
               
             </tr>
           </thead>
-          <tr>
-            <td>12:00</td>
-          </tr>
-             
-  
+          {% for lunes in TProgra %}
+          {% if lunes.Lunes == True %}
+            <tr>
+              <td>{{lunes.HoraInicio|time:"h:i a"}}</td>
+              <td>{{lunes.IdPrograma.TituloPrograma}}</td>
+            </tr>
+          {% endif %}
+          {% endfor %}
           </table>
           
         </div>
         <div class="col-md-6">
-          
+        <center><strong>Martes</strong></center>
+          <table class="table table-hover">
+            <thead>
+            <tr>
+              
+              <th>Hora</th>
+              <th>Programa</th>
+              
+            </tr>
+          </thead>
+          {% for lunes in TProgra %}
+          {% if lunes.Martes == True %}
+            <tr>
+              <td>{{lunes.HoraInicio|time:"h:i a"}}</td>
+              <td>{{lunes.IdPrograma.TituloPrograma}}</td>
+            </tr>
+          {% endif %}
+          {% endfor %}
+          </table>
         </div>
       
 
       </div>
 
-        <!--Martes-->
+
+        <!--Miercoles y Jueves -->
         <div id="aqui" class="row">
 
         <div class="col-md-6">
-          
+        <center><strong>Miércoles</strong></center>
+          <table class="table table-hover">
+            <thead>
+            <tr>
+              
+              <th>Hora</th>
+              <th>Programa</th>
+              
+            </tr>
+          </thead>
+          {% for lunes in TProgra %}
+          {% if lunes.Miercoles == True %}
+            <tr>
+              <td>{{lunes.HoraInicio|time:"h:i a"}}</td>
+              <td>{{lunes.IdPrograma.TituloPrograma}}</td>
+            </tr>
+          {% endif %}
+          {% endfor %}
+          </table>
         </div>
         <div class="col-md-6">
-          
+        <center><strong>Jueves</strong></center>
+          <table class="table table-hover">
+            <thead>
+            <tr>
+              
+              <th>Hora</th>
+              <th>Programa</th>
+              
+            </tr>
+          </thead>
+          {% for lunes in TProgra %}
+          {% if lunes.Jueves == True %}
+            <tr>
+              <td>{{lunes.HoraInicio|time:"h:i a"}}</td>
+              <td>{{lunes.IdPrograma.TituloPrograma}}</td>
+            </tr>
+          {% endif %}
+          {% endfor %}
+          </table>
         </div>
       
 
       </div>
-
-
-
-        <!--Miercoles-->
+        
+        <!--Viernes y Sabado-->
         <div id="aqui" class="row">
 
         <div class="col-md-6">
-          
+        <center><strong>Viernes</strong></center>
+          <table class="table table-hover">
+            <thead>
+            <tr>
+              
+              <th>Hora</th>
+              <th>Programa</th>
+              
+            </tr>
+          </thead>
+          {% for lunes in TProgra %}
+          {% if lunes.Viernes == True %}
+            <tr>
+              <td>{{lunes.HoraInicio|time:"h:i a"}}</td>
+              <td>{{lunes.IdPrograma.TituloPrograma}}</td>
+            </tr>
+          {% endif %}
+          {% endfor %}
+          </table>
         </div>
         <div class="col-md-6">
-          
+        <center><strong>Sábado</strong></center>
+          <table class="table table-hover">
+            <thead>
+            <tr>
+              
+              <th>Hora</th>
+              <th>Programa</th>
+              
+            </tr>
+          </thead>
+          {% for lunes in TProgra %}
+          {% if lunes.Sabado == True %}
+            <tr>
+              <td>{{lunes.HoraInicio|time:"h:i a"}}</td>
+              <td>{{lunes.IdPrograma.TituloPrograma}}</td>
+            </tr>
+          {% endif %}
+          {% endfor %}
+          </table>
         </div>
       
 
       </div>
-        <!--Jueves-->
-        <div id="aqui" class="row">
-
-        <div class="col-md-6">
-          
-        </div>
-        <div class="col-md-6">
-          
-        </div>
-      
-
-      </div>
-        <!--Viernes-->
-        <div id="aqui" class="row">
-
-        <div class="col-md-6">
-          
-        </div>
-        <div class="col-md-6">
-          
-        </div>
-      
-
-      </div>
-        <!--Sabado-->
-        <div id="aqui" class="row">
-
-        <div class="col-md-6">
-          
-        </div>
-        <div class="col-md-6">
-          
-        </div>
-      
-
-      </div>
+        
         <!--Domingo-->
         <div id="aqui" class="row">
 
         <div class="col-md-6">
-          
-        </div>
-        <div class="col-md-6">
-          
+        <center><strong>Domingo</strong></center>
+          <table class="table table-hover">
+            <thead>
+            <tr>
+              
+              <th>Hora</th>
+              <th>Programa</th>
+              
+            </tr>
+          </thead>
+          {% for lunes in TProgra %}
+          {% if lunes.Domingo == True %}
+            <tr>
+              <td>{{lunes.HoraInicio|time:"h:i a"}}</td>
+              <td>{{lunes.IdPrograma.TituloPrograma}}</td>
+            </tr>
+          {% endif %}
+          {% endfor %}
+          </table>
         </div>
       
 

@@ -32,6 +32,9 @@ class Programa(models.Model):
 	DescripcionPrograma = models.TextField(help_text='Descripción del Programa', verbose_name=u'Descripción')
 	ImagenPrograma = models.ImageField(upload_to='programas', verbose_name=u'Programas')
 
+	def __unicode__(self):
+		return self.TituloPrograma
+
 class Programacion(models.Model):
 	IdPrograma = models.ForeignKey(Programa)
 	Lunes = models.BooleanField(verbose_name=u'Lunes')
@@ -45,7 +48,7 @@ class Programacion(models.Model):
 	HoraFin = models.TimeField(auto_now=False, auto_now_add=False, verbose_name=u'Hora Fin')
 
 	def __unicode__(self):
-		return self.IdPrograma
+		return self.IdPrograma.TituloPrograma + " (" + str(self.HoraInicio) + ")"
 
 class Banners(models.Model):
 	TituloBanner = models.CharField(max_length=100, help_text='Titulo del Banner', verbose_name=u'Titulo')

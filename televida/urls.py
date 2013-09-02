@@ -22,7 +22,7 @@ urlpatterns = patterns('',
     url(r'^Contactanos/$', 'televida63.views.contacto', name='contacto'),
     url(r'^poll/', include('poll.urls')),
     url(r'^Buscar/$', 'televida63.views.BuscarNoticia', name='BuscarNoticia'),
-    url(r'^Programacion$',)
+    url(r'^Programacion/$', 'televida63.views.Programaciones', name='Programaciones'),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root':settings.MEDIA_ROOT},
         ),

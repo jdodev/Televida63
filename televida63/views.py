@@ -77,3 +77,9 @@ def BuscarNoticia(request):
 		Noticias2 = pagina.page(pagina.num_pages)
 	return render_to_response('listNoticiasBusqueda.html', {'Noticias' : Noticias2}, context_instance=RequestContext(request))
 
+def Programaciones(request):
+	PrograLunes = Programacion.objects.all().order_by('HoraInicio')
+	return render_to_response('programacion.html', {'TProgra' : PrograLunes}, context_instance=RequestContext(request))
+
+
+
